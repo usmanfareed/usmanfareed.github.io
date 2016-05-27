@@ -420,19 +420,20 @@
 				<!-- Social Networks -->
 				<div class="col-sm-12 btn-class col-md-7">
 				
-					<a href="https://www.facebook.com/uxman.fareed" class="social-ink">
+					<a href="https://www.facebook.com/uxman.fareed" target="_blank" class="social-ink">
 						<img class="socl" src="img/facebook-icon.png" alt="facebook"/>
 					</a>
-					<a href="https://plus.google.com/u/0/118346004933735924948" class="social-ink">
+					<a href="https://plus.google.com/u/0/118346004933735924948" target="_blank" class="social-ink">
 						<img class="socl" src="img/google-icon.png" alt="google"/>
 					</a>
-					<a href="https://www.linkedin.com/in/usman-fareed-74b39695" class="social-ink">
+					<a href="https://www.linkedin.com/in/usman-fareed-74b39695" target="_blank" class="social-ink">
 						<img class="socl" src="img/linkedin-icon.png" alt="linkedin"/>
 					</a>
 				</div>
 				<!-- Download Resume - CV -->
 				<div class="col-sm-5 btn-class hidden-sm hidden-xs">
-					<a class="btn-dwnld" href="/files/CV.docx" download="Usmanfareeds-cv" >Download Resume</a>
+				    <a class="btn-dwnld" id="ResumeDownload" href="/files/CV.docx" download="Usmanfareeds-cv">Download Resume</a>
+                    <p style="margin-top: 2%">Total Downloads <kbd id="count">1</kbd></p>
 				</div>
 			</div>
 		</div>
@@ -514,7 +515,18 @@
 	<!-- Portfolio gallery -->
 	<script src="js/imagelightbox.min.js"></script>
 	<!-- Send Email -->
-	<script src="js/sendemail.js"></script>
+<script src="js/sendemail.js"></script>
+   <script>
+       {
+           $('#ResumeDownload')
+               .click(function () {
+
+                  var value = parseInt($('#count').html());
+                   $('#count').html(value+1);
+               });
+       }
+   </script>
+
 </body>
 
 <!-- Mirrored from izee.ro/market/mywall/one-plus/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 10:21:29 GMT -->
